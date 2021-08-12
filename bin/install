@@ -44,7 +44,7 @@ installGradleSig()
   
   	unzip gradle-${ASDF_INSTALL_VERSION}-bin.zip
   	rm gradle-${ASDF_INSTALL_VERSION}-bin.zip
-  	mv gradle-${ASDF_INSTALL_VERSION}/* .
+  	cp -R gradle-${ASDF_INSTALL_VERSION}/* .
   	rm -rf gradle-${ASDF_INSTALL_VERSION}
   	rm $authentic_checksum_file
   fi
@@ -61,7 +61,7 @@ installGradleNoSign()
   	curl -OJL https://services.gradle.org/distributions/gradle-${ASDF_INSTALL_VERSION}-bin.zip
   	unzip gradle-${ASDF_INSTALL_VERSION}-bin.zip
   	rm gradle-${ASDF_INSTALL_VERSION}-bin.zip
-  	mv gradle-${ASDF_INSTALL_VERSION}/* .
+  	cp -R gradle-${ASDF_INSTALL_VERSION}/* .
     rm -rf gradle-${ASDF_INSTALL_VERSION}
   fi
 }
